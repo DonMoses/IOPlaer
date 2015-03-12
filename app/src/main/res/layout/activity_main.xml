@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="2dp"
+    android:paddingRight="2dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/infoTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="5"
+        android:text="io测试:保存此图片到data/data/com.moses.io/files/" />
+
+    <ImageView
+        android:id="@+id/imgGirls"
+        android:layout_width="480dp"
+        android:layout_height="250dp"
+        android:layout_below="@id/infoTxt"
+        android:contentDescription="imgFileGirls" />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgGirls"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:id="@+id/internalRead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="内部读" />
+
+        <Button
+            android:id="@+id/internalWrite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="内部写" />
+
+        <Button
+            android:id="@+id/internalCacheRead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="内缓存读" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll1"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/internalCacheWrite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="内缓存写" />
+
+        <Button
+            android:id="@+id/internalBitmapRead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="内读图片" />
+
+        <Button
+            android:id="@+id/internalBitmapWrite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="内写图片" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll2"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/externalRead"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="外部读" />
+
+        <Button
+            android:id="@+id/externalWrite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="外部写" />
+        <Button
+            android:id="@+id/listFilesTest"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="文件管理" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll3"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/search_file_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="mp3" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

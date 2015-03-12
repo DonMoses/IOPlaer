@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="0.1dp">
+
+    <GridView
+        android:id="@+id/grid_view_json_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:numColumns="3"
+        android:horizontalSpacing="1dp"
+        android:verticalSpacing="1dp"/>
+    <Button
+        android:id="@+id/json_img_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="(json)读取图片"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="20dp"
+        android:onClick="getImgWithJSON"/>
+    <ProgressBar
+        android:id="@+id/img_pro_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="false"/>
+
+</FrameLayout>

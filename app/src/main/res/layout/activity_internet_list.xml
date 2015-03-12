@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/internet_back_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:drawableLeft="@drawable/internet_list_btn_back"
+        android:drawableStart="@drawable/internet_list_btn_back"
+        android:gravity="start|center_vertical"
+        android:hint="  我的关注"
+        android:padding="3dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <ListView
+        android:id="@+id/internet_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp" />
+
+    <ProgressBar
+        android:id="@+id/internet_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="false" />
+</LinearLayout>
