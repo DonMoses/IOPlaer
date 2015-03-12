@@ -21,7 +21,7 @@ public class LocationActivity extends Activity {
     private TextView locationTxt;
     private LocationManager mLocationManager;
     String mProvider;
-    LocationListener locationListener = new LocationListener() {
+    private final LocationListener locationListener = new LocationListener() {
         @Override
         public void onLocationChanged(Location location) {
             showLocation(location);
@@ -46,6 +46,7 @@ public class LocationActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_location);
         initView();
 
     }
@@ -54,7 +55,7 @@ public class LocationActivity extends Activity {
         locationTxt = (TextView) findViewById(R.id.location_text_view);
         mLocationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         //获取所有可用的位置提供器
-        List<String> providerList = mLocationManager.getAllProviders();
+        List<String> providerList = mLocationManager.getProviders(true);
         if (providerList.contains(LocationManager.GPS_PROVIDER)) {
             mProvider = LocationManager.GPS_PROVIDER;
         } else if (providerList.contains(LocationManager.NETWORK_PROVIDER)) {
@@ -66,6 +67,7 @@ public class LocationActivity extends Activity {
         }
 
         Location location = mLocationManager.getLastKnownLocation(mProvider);
+        Log.e("TAG", "mProvider>>>>>>>>>>>>>" + mProvider);
         Log.e("TAG", "location>>>>>>>>>>>>>" + location);
         if (location != null) {
             //显示当前设备的位置信息
