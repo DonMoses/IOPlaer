@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.moses.aidl.IMyAidlInterface;
+import com.moses.aidl.IMyMusicAidl;
 
 /**
  * Created by 丹 on 2014.12.23
@@ -22,11 +22,11 @@ public class AIDLMusicActivity extends Activity implements View.OnClickListener 
     TextView mTextView;
     Button mTestAIDLBtn, mAIDLPlayBtn;
     String[] mMedias;
-    IMyAidlInterface myAIDLInterface;
+    IMyMusicAidl myAIDLInterface;
     ServiceConnection mServiceConnection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
-            myAIDLInterface = IMyAidlInterface.Stub.asInterface(service);
+            myAIDLInterface = IMyMusicAidl.Stub.asInterface(service);
             Log.e("tag", "11111111111111");
         }
 

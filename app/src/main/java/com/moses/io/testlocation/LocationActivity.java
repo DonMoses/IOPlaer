@@ -66,6 +66,7 @@ public class LocationActivity extends Activity {
             return;
         }
 
+
         Location location = mLocationManager.getLastKnownLocation(mProvider);
         Log.e("TAG", "mProvider>>>>>>>>>>>>>" + mProvider);
         Log.e("TAG", "location>>>>>>>>>>>>>" + location);

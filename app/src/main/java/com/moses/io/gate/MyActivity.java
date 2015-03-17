@@ -22,6 +22,8 @@ import com.moses.io.network.MyJsonImgActivity;
 import com.moses.io.network.MyWebActivity;
 import com.moses.io.network.SimpleWebViewActivity;
 import com.moses.io.network.TuLingChatActivity;
+import com.moses.io.testlocation.LocationActivity;
+import com.moses.io.testmedia.PhotoActivity;
 import com.moses.io.testuis.GridViewAsyncTaskNoThreadPoolHttpBitmapActivity;
 import com.moses.io.testuis.GridViewAsyncTaskHttpBitmapActivity;
 import com.moses.io.testuis.GridViewAsyncTaskThreadPoolHttpBitmapActivity;
@@ -56,7 +58,7 @@ public class MyActivity extends Activity {
                 mData.get(position).intentStart(MyActivity.this);
             }
         });
-        
+
     }
 
 
@@ -119,6 +121,8 @@ public class MyActivity extends Activity {
         mData.add(new MyActivityIntents(MyJsonImgActivity.class, "简单封装http|JSON图像传递（基于字符串）和解析"));
         mData.add(new MyActivityIntents(InternetListActivity.class, "简单封装http|internet显示ListView列表"));
         mData.add(new MyActivityIntents(TuLingChatActivity.class, "http|JSON|图灵智能应答"));
+        mData.add(new MyActivityIntents(PhotoActivity.class, "多媒体之拍照"));
+        mData.add(new MyActivityIntents(LocationActivity.class, "地理位置信息"));
 
         return mData;
     }

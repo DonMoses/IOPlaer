@@ -103,11 +103,11 @@ public class PagerPlayerActivity extends Activity {
             mMP = null;
         }
     }
-
+	/**
+	 * 发布通知， 用以在状态栏对播放器进行一定的控制
+     */
     public void playerNotification() {
-        /**
-         * 发布通知， 用以在状态栏对播放器进行一定的控制
-         */
+        
         // NotificationCompat.Builder 对象
         builder = new NotificationCompat.Builder(PagerPlayerActivity.this);
         builder.setSmallIcon(R.drawable.icon_music);
