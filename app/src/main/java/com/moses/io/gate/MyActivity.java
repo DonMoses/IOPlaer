@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.moses.io.MainActivity;
 import com.moses.io.R;
 import com.moses.io.SimpleCallBackActivity;
+import com.moses.io.TestAIDLActivity;
 import com.moses.io.beams.MyActivityIntents;
 import com.moses.io.network.IWebActivity;
 import com.moses.io.network.InternetListActivity;
@@ -123,6 +124,7 @@ public class MyActivity extends Activity {
         mData.add(new MyActivityIntents(TuLingChatActivity.class, "http|JSON|图灵智能应答"));
         mData.add(new MyActivityIntents(PhotoActivity.class, "多媒体之拍照"));
         mData.add(new MyActivityIntents(LocationActivity.class, "地理位置信息"));
+        mData.add(new MyActivityIntents(TestAIDLActivity.class, "AIDL测试"));
 
         return mData;
     }

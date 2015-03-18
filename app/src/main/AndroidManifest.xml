@@ -49,6 +49,7 @@
         <activity android:name=".testuis.GridViewAsyncTaskThreadPoolHttpBitmapActivity" />
         <activity android:name=".network.SimpleWebViewActivity" />
         <activity android:name="com.moses.io.SimpleCallBackActivity" />
+        <activity android:name="com.moses.io.TestAIDLActivity" />
 
         <service android:name=".services.MusicService" />
 
